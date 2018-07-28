@@ -20,10 +20,10 @@ class GameInfoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding.game = Game("First Game")
+        binding.game = Game("First Game", 123, "https://upload.wikimedia.org/wikipedia/commons/b/b5/Kotlin-logo.png?uselang=fr")
 
         binding.root.textView.setOnClickListener {
-            binding.game = Game("Second game")
+            binding.game = Game("Second Game", 456, "http://pogo-news-prod.s3.amazonaws.com/wp-content/uploads/2012/06/java-logo.jpg")
         }
 
     }
