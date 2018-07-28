@@ -1,5 +1,6 @@
 package com.titouan.next.movilenext_lesson3_databinding.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
@@ -39,7 +40,10 @@ class GameInfoActivity : AppCompatActivity() {
             binding.game?.rating = 2.3
         }
 
-        testRxJava()
+        fab.setOnClickListener {
+            startActivity(Intent(this, GameAddActivity::class.java))
+        }
+
     }
 
     fun testRxJava() {
