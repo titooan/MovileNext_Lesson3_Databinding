@@ -7,7 +7,6 @@ import com.titouan.next.movilenext_lesson3_databinding.databinding.ActivityGameI
 import com.titouan.next.movilenext_lesson3_databinding.model.Game
 import com.titouan.next.movilenext_lesson3_databinding.utils.contentView
 import kotlinx.android.synthetic.main.activity_game_info.*
-import kotlinx.android.synthetic.main.activity_game_info.view.*
 
 
 class GameInfoActivity : AppCompatActivity() {
@@ -21,15 +20,14 @@ class GameInfoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val game = Game("First Game", 123, "https://upload.wikimedia.org/wikipedia/commons/b/b5/Kotlin-logo.png?uselang=fr", 4.0)
-        binding.game = game
+        binding.game = Game("First Game", 123, "https://upload.wikimedia.org/wikipedia/commons/b/b5/Kotlin-logo.png?uselang=fr", 4.0)
 
         tvName.setOnClickListener {
             binding.game = Game("Second Game", 456, "http://pogo-news-prod.s3.amazonaws.com/wp-content/uploads/2012/06/java-logo.jpg", 3.5)
         }
 
         tvRating.setOnClickListener {
-            game.rating = 2.3
+            binding.game?.rating = 2.3
         }
 
     }
