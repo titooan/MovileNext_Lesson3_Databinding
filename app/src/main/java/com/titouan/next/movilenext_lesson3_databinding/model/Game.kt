@@ -5,7 +5,7 @@ import android.databinding.Bindable
 import com.android.databinding.library.baseAdapters.BR
 import com.titouan.next.movilenext_lesson3_databinding.utils.bindable
 
-class Game(var name: String,
+class Game(name: String,
            val launchYear: Int,
            val imageUrl: String,
            rating: Double) : BaseObservable() {
@@ -14,5 +14,8 @@ class Game(var name: String,
 
     @get:Bindable
     var rating by bindable(rating, BR.rating)
+
+    @get:Bindable
+    var name by bindable(name, BR.name)
 
 }
